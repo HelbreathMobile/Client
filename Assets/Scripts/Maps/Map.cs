@@ -19,18 +19,13 @@ public class Map
             objectTiles = new ObjectTile[tiles2DArray.Length];
             for (int i = 0; i < tiles2DArray.Length; i++) // rows of the csv
             {
-                try
-                {
-                    objectTiles[arrayCounter] = new ObjectTile(
-                        int.Parse((string)tiles2DArray[i][0]),
-                        int.Parse((string)tiles2DArray[i][1]),
-                        "Maps/tiles/" + (string)tiles2DArray[i][2].Replace(".png", "")
-                    );
-                }
-                catch (System.FormatException e)
-                {
-                    Debug.Log("I was " + i + " with data " + tiles2DArray[i][0]);
-                }
+
+
+                objectTiles[arrayCounter] = new ObjectTile(
+                int.Parse((string)tiles2DArray[i][0]),
+                int.Parse((string)tiles2DArray[i][1]),
+                "Maps/tiles/" + (string)tiles2DArray[i][2].Replace(".png", "")
+            );
                 arrayCounter++;
             }
         }
